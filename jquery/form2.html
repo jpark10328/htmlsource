@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="form2.html" method="get">
+      <div>
+        <input type="text" name="num1" id="num1" />
+        <label for="">+</label>
+        <input type="text" name="num2" id="num2" />
+        <button type="button">결과확인</button>
+      </div>
+      <div>
+        <input type="text" name="result" id="result" readonly />
+      </div>
+    </form>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          let num1 = parseInt($("#num1").val());
+          let num2 = parseInt($("#num2").val());
+
+          // 결과를 result 안에 보여주기
+          $("#result").val(num1 + num2);
+        });
+      });
+    </script>
+  </body>
+</html>

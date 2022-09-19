@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slide {
+        border: 2px solid green;
+        width: 800px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+      }
+      .slide img {
+        float: left;
+      }
+      .controls a {
+        background-color: #333;
+        line-height: 50px;
+        color: #fff;
+        display: block;
+        text-align: center;
+        white-space: nowrap; /* 공백을 기준으로 엔터를 넣지 말기 */
+        position: absolute;
+        top: calc(50% - 25px);
+      }
+      .prev {
+        right: 100%;
+      }
+      .next {
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide">
+      <img src="https://placeimg.com/400/300/nature" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+        eveniet libero maxime, deleniti illo alias quos enim laudantium minima
+        veniam necessitatibus nisi, repellendus vero saepe blanditiis officiis?
+        Totam, magni debitis.
+      </p>
+      <div class="controls">
+        <a href="#" class="prev">previous project</a>
+        <a href="#" class="next">Next project</a>
+      </div>
+    </div>
+  </body>
+</html>

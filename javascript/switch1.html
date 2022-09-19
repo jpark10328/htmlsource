@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // if ~ else if ~ else 구조 다르게 표현
+      //   switch(표현식){
+      //     case x:
+      //         break;
+      //     case y:
+      //         break;
+      //     ....
+      //     default:
+      //         코드실행
+      //   }
+
+      // getDay() : Sunday : 0, Monday=1
+      switch (new Date().getDay()) {
+        case 0: // if(day==0)
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+      }
+      console.log(day);
+    </script>
+  </body>
+</html>

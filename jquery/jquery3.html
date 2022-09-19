@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <h1 class="item">Header-1</h1>
+    <h1 class="item select">Header-2</h1>
+    <h1 class="item">Header-3</h1> -->
+
+    <h1>인접 관계 선택자</h1>
+    <ul id="wrap">
+      <li>
+        리스트 1
+        <ul>
+          <li id="list_1">리스트1-1</li>
+          <li>리스트1-2</li>
+        </ul>
+      </li>
+      <li>리스트 2</li>
+      <li>리스트 3</li>
+    </ul>
+
+    <script>
+      $(function () {
+        $(".item.select").css("color", "red");
+
+        $("#list_1").parent().css("border", "1px solid red");
+      });
+    </script>
+  </body>
+</html>

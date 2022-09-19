@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        display: none;
+        color: red;
+        margin-top: 0;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 입력 값 검증 : -->
+    <form action="">
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" maxlength="4" />
+      </div>
+      <div>
+        <label for="age">나이</label>
+        <input type="number" name="age" id="age" min="10" max="30" />
+      </div>
+      <div>
+        <label for="date">날짜</label>
+        <input type="date" name="date" id="date" min="2022-08-01" max="2022-09-30" />
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password" required />
+        <span class="result"></span>
+      </div>
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div>
+        <label for="tel">전화번호</label>
+        <input
+          type="text"
+          name="tel"
+          id="tel"
+          placeholder="형식은 000-0000-0000"
+          onfocus="inputClear()"
+        />
+        <p id="result"></p>
+      </div>
+      <div>
+        <button type="button">전송</button>
+      </div>
+    </form>
+    <script>
+      let btn = document.querySelector("button");
+      let result = document.querySelector("#result");
+
+      btn.addEventListener("click", telCheck);
+
+      function inputClear() {
+        document.querySelector("#tel").value = "";
+        result.innerHTML = "";
+        result.style.display = "none";
+      }
+
+      // 전화번호 입력 값 검증(숫자 070(02)-8500(850)-1234)
+      function telCheck() {
+        //전화번호 가져오기
+        let tel = document.querySelector("#tel").value;
+        //패턴 정의
+        const regex = /^\d{2,3}-\d{3,4}-\d{4}$/;
+
+        //패턴대로 입력값이 들어왔는지 확인 : test()
+        let flag = regex.test(tel);
+
+        if (!flag) {
+          result.style.display = "block";
+          result.innerHTML = "전화번호를 확인해 주세요";
+        }
+      }
+    </script>
+  </body>
+</html>

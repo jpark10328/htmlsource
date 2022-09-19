@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numArr = [52, 273, 586, 32, 57, 103, 312, 2];
+
+      //배열에서 최소값과 최대값 출력
+      let max = numArr[0]; // max=52
+      let min = numArr[0]; // min=52
+
+      for (let i = 1; i < numArr.length; i++) {
+        if (numArr[i] > max) max = numArr[i];
+        if (numArr[i] < min) min = numArr[i];
+      }
+
+      document.write("최대값 : " + max + "<br>");
+      document.write("최소값 : " + min);
+    </script>
+  </body>
+</html>

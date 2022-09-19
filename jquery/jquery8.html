@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="./jquery-3.6.1.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <button type="button" id="on">Turn on the light</button>
+    <img src="./pic_bulboff.gif" alt="전구" />
+    <button type="button" id="off">Turn off the light</button>
+    <div id="wrap" style="margin-top: 20px">
+      <img src="../css/image/left-arrow.png" alt="왼쪽 화살표" />
+      <button type="button" id="change">변경</button>
+    </div>
+    <div id="wrap2" style="margin-top: 20px">
+      <img src="../css/image/left-arrow.png" alt="왼쪽 화살표" />
+      <img src="../css/image/right-arrow.png" alt="오른쪽 화살표" style="display: none" />
+      <button type="button" id="change2">변경</button>
+    </div>
+    <script>
+      $(function () {
+        // $("#on").click(function () {
+        //   //img src 변경
+        //   $("img").attr("src", "./pic_bulbon.gif");
+        // });
+        // $("#off").click(function () {
+        //   //img src 변경
+        //   $("img").attr("src", "./pic_bulboff.gif");
+        // });
+
+        let temp = true;
+        $("#change").click(function () {
+          if (temp) {
+            $("#wrap img").attr("src", "../css/image/right-arrow.png");
+            temp = false;
+          } else {
+            $("#wrap img").attr("src", "../css/image/left-arrow.png");
+            temp = true;
+          }
+        });
+
+        $("#change2").click(function () {
+          $("#wrap2 img").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

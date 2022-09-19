@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단위</title>
+    <style>
+      body {
+        font-size: 16px; /* body 자손 태그들은 모두 16px */
+      }
+      h1 {
+        font-size: 1.5em; /* 16px * 1.5 = 24px */
+      }
+      h2 {
+        font-size: 1.2em; /* 16px * 1.2 = 19.2px */
+      }
+      p {
+        /* width: 800px; */
+        width: 80%;
+        font-size: 1em;
+      }
+      span {
+        font-size: 0.8em; /* 16px(body) * 1em(p) * 0.8em */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 단위 
+         1) px : 고정값
+         2) % : 상대값
+         3) em : em단위가 쓰여진 곳의 폰트 사이즈 배수
+    -->
+    <h1>CSS 기본문법</h1>
+    <h2>기본 단위</h2>
+    <p>
+      <span>Lorem ipsum</span> dolor sit amet consectetur adipisicing elit.
+      Impedit repudiandae sit saepe consequatur voluptates iusto. Deserunt sint
+      asperiores nesciunt maxime vel nisi molestiae, excepturi sed est
+      voluptates cupiditate tempora esse!
+    </p>
+  </body>
+</html>

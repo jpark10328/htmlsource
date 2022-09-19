@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // break : 반복하던 블록 빠져나오기, switch case break;
+      // continue
+      //   let str = "";
+      //   for (let i = 0; i < 10; i++) {
+      //     if (i == 3) {
+      //       break;
+      //     }
+      //     str += "The number is " + i + "<br>";
+      //   }
+      //   document.write(str);
+
+      //   for (let i = 0; true; i++) {
+      //     alert(i + " 번째 반복문");
+
+      //     // ! == not의 의미
+      //     if (!confirm("정말로 삭제하시겠습니까?")) {
+      //       break;
+      //     }
+      //   }
+
+      //continue : continue 이후의 실행문들을 실행하지 않고 다시 루프로 돌아감
+
+      let str = "";
+      for (let i = 0; i < 10; i++) {
+        if (i == 3) {
+          continue;
+        }
+        str += "The number is " + i + "<br>";
+      }
+      document.write(str);
+    </script>
+  </body>
+</html>

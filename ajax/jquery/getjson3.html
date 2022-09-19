@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../script/mystyle.css" />
+    <script src="../../jquery/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script>
+      $(function () {
+        //결과를 보여줄 요소
+        let div = $("div");
+
+        $(".container li:last-child").click(function () {
+          $.getJSON({
+            url: "https://jsonplaceholder.typicode.com/posts",
+            success: function (result) {
+              let data = "<ul>";
+              $(result).each(function (idx, item) {
+                data += "<li>userId : " + item.userId + "</li>";
+                data += "<li>id : " + item.id + "</li>";
+                data += "<li>title : " + item.title + "</li>";
+                data += "<li>body : " + item.body + "</li>";
+              });
+
+              data += "</ul>";
+
+              div.html(data);
+            },
+            error: function (xhr, textstatus, error) {
+              div.html("데이터를 가져오는 데 실패했습니다.");
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

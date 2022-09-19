@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="./jquery-3.6.1.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h2>클릭하면 사라집니다.</h2>
+    <p class="para1">이것은 문단입니다.</p>
+    <p id="para2">이것은 두번째 문단입니다.</p>
+    <!-- table>tr*4>td*2{내용$}-->
+    <table>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+    </table>
+    <script>
+      $("h2, .para1, #para2").click(function () {
+        $(this).css("color", "red");
+      });
+
+      //table 배경색상 변경
+      $("tr:even").css("background", "#bbf");
+      $("tr:odd").css("background", "orange");
+    </script>
+  </body>
+</html>

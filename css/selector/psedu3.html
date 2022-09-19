@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input:disabled {
+        background-color: #ddd;
+        border: 1px #ccc solid;
+      }
+      input:checked + span {
+        color: blue;
+      }
+      /* h1 마우스를 올리면 밑줄 긋기 */
+      h1:hover {
+        text-decoration: underline;
+      }
+      /* class명이 userid 인 input에 포커스가 들어오면 배경색을 임의로 변경 */
+      .userid:focus {
+        background-color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상 클래스</h1>
+    <input type="text" class="userid" id="userid" />
+
+    <form action="" method="get">
+      <fieldset>
+        <legend>사용자 정보</legend>
+        <label for="">이름</label>
+        <input type="text" name="username" id="" disabled />
+      </fieldset>
+      <fieldset>
+        <legend>신청과목</legend>
+        <p>이 달에 신청할 과목을 선택하세요</p>
+        <label>
+          <input type="radio" name="subject" value="speaking" />
+          <span>회화</span>
+        </label>
+        <label>
+          <input type="radio" name="subject" value="grammer" />
+          <span>문법</span>
+        </label>
+        <label>
+          <input type="radio" name="subject" value="writing" />
+          <span>작문</span>
+        </label>
+      </fieldset>
+    </form>
+  </body>
+</html>

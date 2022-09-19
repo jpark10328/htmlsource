@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //문서가 로드되면 body 안에 새로운 태그 삽입하기
+      window.onload = function () {
+        var output = "";
+        output += "<ul>";
+        output += "<li>JAVASCRIPT</li>";
+        output += "<li>JQUERY</li>";
+        output += "<li>AJAX</li>";
+        output += "</ul>";
+
+        // document.body : body 요소 리턴
+        document.body.innerHTML = output;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="changeColor('white')">
+    <!--
+        태그에 일어나는 이벤트를 전달할 수 있음
+    -->
+    <div>
+      <input type="radio" name="color" id="" onclick="changeColor('lightblue')" />파랑색
+      <input type="radio" name="color" id="" onclick="changeColor('green')" />녹색
+      <input
+        type="radio"
+        name="color"
+        id=""
+        onclick="document.body.style.background = 'red'"
+      />빨강
+    </div>
+    <div>
+      <!--onchange : 내용을 변경한 후 포커스를 잃을 때 발생-->
+      <label for="">이름</label>
+      <input type="text" name="word" id="word" onchange="lower()" />
+    </div>
+    <p>입력 필드를 벗어나면 소문자로 변경됩니다.</p>
+    <script>
+      function changeColor(color) {
+        document.body.style.background = color;
+      }
+      function lower() {
+        //word 에 있는 내용을 소문자로 변경
+        let word = document.querySelector("#word");
+        word.value = word.value.toLowerCase();
+      }
+    </script>
+  </body>
+</html>

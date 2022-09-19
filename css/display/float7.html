@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        width: 960px;
+        background-color: #ccc;
+        margin: 0 auto; /*가운데*/
+      }
+      h1 {
+        float: left;
+      }
+      nav {
+        float: right;
+      }
+      nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 20px;
+        line-height: 60px;
+      }
+      a:link {
+        text-decoration: none;
+        color: black;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header clearfix">
+      <h1><a href="#">Logo</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Member Join</a></li>
+          <li><a href="#">Site map</a></li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

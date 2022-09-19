@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        display: none;
+        color: red;
+        margin-top: 0;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 입력 값 검증 : -->
+    <form action="">
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" />
+        <span class="result"></span>
+      </div>
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" onkeyup="nameCheck(this.value)" />
+      </div>
+      <div>
+        <button type="button">전송</button>
+      </div>
+    </form>
+    <script>
+      let btn = document.querySelector("button");
+      let result = document.querySelector(".result");
+
+      btn.addEventListener("click", emailCheck);
+
+      function nameCheck(nameVal) {
+        //한글
+        const regex = /^[가-힣]{2,4}$/;
+        if (!regex.test(nameVal)) {
+          alert("이름을 확인해 주세요");
+        } else {
+          alert("이름이 정확합니다.");
+        }
+      }
+
+      function emailCheck() {
+        let emailVal = document.querySelector("#email").value;
+
+        //이메일 주소의 첫번째 부분에는 다음 중 최소한 하나가 포함되어야 한다.
+        // 대문자,소문자,0-9,_  : [A-Za-z0-9_]+  or  \w+
+        // @
+        // 대문자나 소문자가 최소한 하나 있어야 함 [A-Za-z]+
+        // 마침표가 와야 함 \.
+        // com,org,edu,ent 중 하나로 끝나야 한다. (com|org|edu|ent)
+        const regex = /\w+@[A-Za-z]+\.(com|org|edu|ent)/;
+
+        if (!regex.test(emailVal)) {
+          result.innerHTML = "이메일 형식을 확인해 주세요";
+        } else {
+          result.innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>

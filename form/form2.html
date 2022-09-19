@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        form
+        1) input element
+          type = 'text'
+          type = 'password'
+          type = 'checkbox' : 사용자에게 여러 개 선택할 수 있는 방식
+          type = 'radio' : 여러 개 중 하나만 선택할 수 있는 방식
+          type = 'button' : button 모양만 제공(기능은 없음) ==> 스크립트 이용 다양한 기능 부여
+          type = 'submit' : button 모양 + 폼 전송
+          type = 'reset'  : button 모양 + 폼 입력 초기화
+    -->
+    <form action="form1.html" method="get">
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="" id="" />
+      </div>
+      <div>
+        <label for="">비밀번호</label>
+        <input type="password" name="" id="" />
+      </div>
+      <div>
+        <p>좋아하는 과일을 선택하세요(복수체크 가능)</p>
+        <input type="checkbox" name="fruits" id="" value="사과" />사과
+        <input type="checkbox" name="fruits" id="" value="복숭아" checked />복숭아
+        <input type="checkbox" name="fruits" id="" value="바나나" />바나나
+        <input type="checkbox" name="fruits" id="" value="파인애플" />파인애플
+      </div>
+      <div>
+        <input type="radio" name="gender" id="" value="남" checked />남
+        <input type="radio" name="gender" id="" value="여" />여
+      </div>
+      <div>
+        <input type="button" value="보내기1" onclick="location.href='form1.html'" />
+        <input type="submit" value="보내기2" />
+        <input type="reset" value="보내기3" />
+      </div>
+    </form>
+  </body>
+</html>

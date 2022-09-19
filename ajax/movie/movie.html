@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./movie.css" />
+    <!--<script src="./fetch.js/" defer></script>-->
+    <!-- <script src="./fetch2.js" defer></script> -->
+    <script src="../../jquery/jquery-3.6.1.min.js"></script>
+    <script src="./query.js" defer></script>
+  </head>
+  <body>
+    <div class="box1">일별 박스 오피스</div>
+    <div class="box2">
+      <form action="">
+        <input type="text" name="txtYear" id="txtYear" size="6" />년
+        <!-- select>option[value="0$"]*12{$ 월} -->
+        <select name="selMon" id="selMon">
+          <option value="01">1 월</option>
+          <option value="02">2 월</option>
+          <option value="03">3 월</option>
+          <option value="04">4 월</option>
+          <option value="05">5 월</option>
+          <option value="06">6 월</option>
+          <option value="07">7 월</option>
+          <option value="08">8 월</option>
+          <option value="09">9 월</option>
+          <option value="10">10 월</option>
+          <option value="11">11 월</option>
+          <option value="12">12 월</option>
+        </select>
+        <!-- select>option[value="$"]*31{$ 일} -->
+        <select name="selDay" id="selDay">
+          <option value="01">1 일</option>
+          <option value="02">2 일</option>
+          <option value="03">3 일</option>
+          <option value="04">4 일</option>
+          <option value="05">5 일</option>
+          <option value="06">6 일</option>
+          <option value="07">7 일</option>
+          <option value="08">8 일</option>
+          <option value="09">9 일</option>
+          <option value="10">10 일</option>
+          <option value="11">11 일</option>
+          <option value="12">12 일</option>
+          <option value="13">13 일</option>
+          <option value="14">14 일</option>
+          <option value="15">15 일</option>
+          <option value="16">16 일</option>
+          <option value="17">17 일</option>
+          <option value="18">18 일</option>
+          <option value="19">19 일</option>
+          <option value="20">20 일</option>
+          <option value="21">21 일</option>
+          <option value="22">22 일</option>
+          <option value="23">23 일</option>
+          <option value="24">24 일</option>
+          <option value="25">25 일</option>
+          <option value="26">26 일</option>
+          <option value="27">27 일</option>
+          <option value="28">28 일</option>
+          <option value="29">29 일</option>
+          <option value="30">30 일</option>
+          <option value="31">31 일</option>
+        </select>
+        <input type="button" value="확인" id="bt1" />
+      </form>
+      <!-- 순위를 보여줄 영역-->
+      <div id="msg"></div>
+      <div class="box3"></div>
+    </div>
+  </body>
+</html>

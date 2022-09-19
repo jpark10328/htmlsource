@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2 {
+        padding-bottom: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        경로 : 절대경로, 상대경로
+        . : 현재 폴더
+        .. : 상위 폴더
+
+        절대경로 : c:/windows/programfiles/~~~~ , http://~~~
+        상대경로 : 현재 문서를 기준으로 경로 설정(. or ..) ===> 중요
+    -->
+    <ul>
+      <li><a href="#title1">제목1</a></li>
+      <li><a href="#title2">제목2</a></li>
+      <li><a href="link1.html">link1 페이지</a></li>
+      <li><a href="../list/exam1.html">exam1.html 페이지</a></li>
+    </ul>
+    <!-- id : 현재 페이지에서 값이 중복되면 안됨 => # (사용할 때) -->
+    <h2 id="title1">제목1</h2>
+    <h2 id="title2">제목2</h2>
+  </body>
+</html>

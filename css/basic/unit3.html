@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        font-size: 13px;
+      }
+      body {
+        font-size: 12px;
+      }
+      .box {
+        float: left;
+        margin-right: 10px;
+        color: #fff;
+        text-align: center;
+        background: blue;
+      }
+      .box_px {
+        width: 160px;
+        height: 160px;
+      }
+      .box_em {
+        width: 10em; /* 16px * 10 em  12px * 10em */
+        height: 10em;
+      }
+      .box_rem {
+        /* 16px * 10 rem  13px * 10rem */
+        width: 10rem;
+        height: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 기본문법</h1>
+    <h2>기본 단위</h2>
+    <div class="wrapper">
+      <div class="box box_px">PX</div>
+      <div class="box box_em">EM</div>
+      <div class="box box_rem">REM</div>
+    </div>
+  </body>
+</html>

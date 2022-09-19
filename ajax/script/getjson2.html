@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./mystyle.css" />
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script>
+      // 서버가 가지고 있는 version2.json 페이지를 가져오기
+      // 현재 페이지에서 version2.json 페이지 보기
+      document
+        .querySelector(".container li:last-child")
+        .addEventListener("click", getJson);
+      //결과를 보여줄 요소
+      let div = document.querySelector("div");
+
+      function getJson() {
+        fetch("../data/version2.json")
+          .then((response) => {
+            if (!response.ok) {
+              // http 상태코드가 200이 아닌 경우
+              return new Error("경로를 확인해 주세요");
+            }
+            return response.json();
+          })
+          .then((result) => {
+            let data = "<ul>";
+
+            result.forEach((item) => {
+              data += "<li>version : " + item.version + "</li>";
+              data += "<li>codename : " + item.codename + "</li>";
+            });
+
+            data += "</ul>";
+
+            div.innerHTML = data;
+          })
+          .catch((error) => {
+            div.innerHTML = error;
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* #header {
+        color: "red";
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <h3 id="header" class="header">Header 3</h3>
+    <script>
+      //h3 태그 클릭시 css 속성 추가
+      let header = document.querySelector("#header");
+      header.addEventListener("click", change);
+
+      function change() {
+        // 글자 색상 변경
+        header.style.color = "blue";
+        // 테두리 그리기
+        header.style.border = "1px solid red";
+        // 안쪽 여백 10px
+        header.style.padding = "10px";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #text {
+        color: green !important;
+      }
+      .area p {
+        color: red;
+      }
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        우선순위 : 명시도 점수가 높은 선언이 우선
+        !important(1000점) > 인라인 선언(500점) > 아이디 선택자(100점) > 클래스 선택자(10점) > 태그 선택자(1점) > 전체 > 상속
+
+
+        .list li.item {} => 21점
+        .list li:hover {} => 21점(가상클래스도 클래스 선택자로)
+        .box::before {} => 11점  (가상요소는 태그 선택자로 생각)
+        #submit span {} => 101점
+        header .ment li:nth-child(2) => 22점
+        :not(.box) => 10점  (not 은 점수 없음)
+    -->
+    <div class="area">
+      <p id="text" style="color: pink">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aspernatur
+        voluptatum eius mollitia repudiandae, dolores odit! Culpa sit est
+        perspiciatis ullam, nisi veritatis perferendis nobis placeat nam
+        molestiae omnis asperiores!
+      </p>
+    </div>
+  </body>
+</html>

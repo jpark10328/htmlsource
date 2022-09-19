@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="changeColor('white')">
+    <!--
+        태그에 일어나는 이벤트를 전달할 수 있음
+    -->
+    <div>
+      <!--onblur : 포커스 잃을 때 발생-->
+      <label for="">이름</label>
+      <input type="text" name="word" id="word" onblur="lower()" />
+    </div>
+    <div>
+      <!--onchange : 내용을 변경한 후 포커스를 잃을 때 발생-->
+      <label for="">이름</label>
+      <input type="text" name="word" id="word" onchange="lower()" />
+    </div>
+    <p>입력 필드를 벗어나면 소문자로 변경됩니다.</p>
+    <p
+      onmouseover="this.style.color = 'red'"
+      onmouseleave="this.style.color='black'"
+      style="font-size: 30px"
+    >
+      Mouse over me!
+    </p>
+    <div>
+      <select onchange="fruit()">
+        <option value="사과">사과</option>
+        <option value="오렌지">오렌지</option>
+        <option value="포도">포도</option>
+        <option value="딸기">딸기</option>
+        <option value="바나나">바나나</option>
+      </select>
+    </div>
+    <script>
+      function lower() {
+        alert("lower");
+      }
+      function fruit() {
+        //사용자가 선택한 과일 가져오기
+        let select = document.querySelector("select");
+        alert(select.value);
+      }
+    </script>
+  </body>
+</html>

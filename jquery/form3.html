@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form action="form2.html" method="get">
+      <div>
+        <input type="text" name="num1" id="num1" />
+        <select name="op" id="op">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="text" name="num2" id="num2" />
+        <button type="button">결과확인</button>
+      </div>
+      <div>
+        <input type="text" name="result" id="result" readonly />
+      </div>
+    </form>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          let num1 = parseInt($("#num1").val());
+          let num2 = parseInt($("#num2").val());
+          let op = $("#op").val();
+
+          let temp = 0;
+
+          switch (op) {
+            case "+":
+              temp = num1 + num2;
+              break;
+            case "-":
+              temp = num1 - num2;
+              break;
+            case "*":
+              temp = num1 * num2;
+              break;
+            case "/":
+              temp = num1 / num2;
+              break;
+          }
+
+          $("#result").val(temp);
+        });
+      });
+    </script>
+  </body>
+</html>

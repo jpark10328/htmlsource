@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="./jquery-3.6.1.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h2>더블 클릭하면 사라집니다.</h2>
+    <p class="para1">이것은 문단입니다.</p>
+    <button id="change">Change</button>
+    <button id="show">Show</button>
+    <div>
+      <input type="text" name="username" id="" />
+      <button id="send">전송</button>
+    </div>
+    <script>
+      $(function () {
+        console.log($("h2").text()); // innerText
+        console.log($("h2").html()); // innerHTML
+        // console.log($("h2").innerText); // undefined
+
+        $("#send").click(function () {
+          console.log($(":text").val()); // value
+        });
+
+        $("#change").click(function () {
+          // para1 의 text 부분 변경
+          // $(".para1").text("안녕하세요");
+          // $(".para1").text("<b>안녕하세요</b>");
+          $(".para1").html("<b>안녕하세요</b>");
+        });
+      });
+    </script>
+    <script>
+      const arraySparse = [1, 3, , 7];
+      arraySparse.forEach(function (ele, idx) {
+        document.write(idx + " : " + ele + "<br>");
+      });
+
+      $.each(arraySparse, function (idx, val) {
+        document.write(idx + " : " + val + "<br>");
+      });
+
+      $(arraySparse).each(function (idx, val) {
+        document.write(idx + " : " + val + "<br>");
+      });
+    </script>
+  </body>
+</html>

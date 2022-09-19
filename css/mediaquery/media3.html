@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(9, 100, 160);
+      }
+      #container {
+        width: 320px;
+        margin: 5px auto;
+      }
+      .card {
+        width: 300px;
+        height: 500px;
+        margin: 20px 10px;
+        border: 1px solid #0f0f0f33;
+        background-color: #fff;
+        position: relative;
+      }
+      .words {
+        padding: 10px;
+        text-align: center;
+        position: absolute;
+        left: 100px;
+        top: 300px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1719px) {
+        #container {
+          width: 570px;
+          margin: 50px 0;
+        }
+        .card {
+          width: 550px;
+          height: 250px;
+          margin: 20px 10px;
+          border: 1px solid #0f0f0f33;
+          background-color: #fff;
+          position: relative;
+        }
+        .words {
+          position: absolute;
+          width: 200px;
+          left: 310px;
+          top: 50px;
+        }
+      }
+      @media screen and (min-width: 1720px) {
+        #container {
+          width: 1710px;
+          margin: 50px auto;
+        }
+        .card {
+          width: 550px;
+          height: 250px;
+          float: left;
+          margin: 10px;
+          border: 1px solid #0f0f0f33;
+          background-color: #fff;
+          position: relative;
+        }
+        .words {
+          position: absolute;
+          width: 200px;
+          left: 300px;
+          top: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="card">
+        <img src="images/1.jpg" alt="" />
+        <div class="words">
+          <h2>일 분 전만큼 먼 시간은 없다</h2>
+          <h3>-Jim Bishop</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/2.jpg" alt="" />
+        <div class="words">
+          <h2>웃음은 마음의 조깅이다</h2>
+          <h3>-Norman Cousins</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/3.jpg" alt="" />
+        <div class="words">
+          <h2>낡은 옷은 그냥 입고 새 책을 사라</h2>
+          <h3>-Austin Phelps</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

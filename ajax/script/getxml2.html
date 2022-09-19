@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./mystyle.css" />
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script>
+      document
+        .querySelector(".container li:last-child")
+        .addEventListener("click", getJson);
+      //결과를 보여줄 요소
+      let div = document.querySelector("div");
+
+      function getJson() {
+        fetch("../data/company.xml")
+          .then((response) => {
+            if (!response.ok) {
+              // http 상태코드가 200이 아닌 경우
+              return new Error("경로를 확인해 주세요");
+            }
+            return response.text();
+          })
+          .then((result) => {
+            // xml 파서
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(result, "application/xml");
+
+            console.log(xml);
+
+            // member 태그 모든 요소 가져오기
+            let members = xml.querySelectorAll("member");
+
+            let data = "<ul>";
+            members.forEach((item, idx) => {
+              data += "<li>name : " + item.querySelector("name").textContent + "</li>";
+              data += "<li>part : " + item.querySelector("part").textContent + "</li>";
+            });
+
+            data += "</ul>";
+
+            div.innerHTML = data;
+          })
+          .catch((error) => {
+            div.innerHTML = error;
+          });
+      }
+    </script>
+  </body>
+</html>

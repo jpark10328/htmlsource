@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #222;
+      }
+      .grid {
+        width: 500px;
+        margin: 0 auto;
+        background-color: white;
+        font-size: 0; /* inline-block 생기는 오른쪽 공백 제거 */
+      }
+      .grid-item {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        vertical-align: top; /* inline-block 생기는 아래 공백 제거 */
+      }
+      .grid-item.a {
+        background-color: orange;
+      }
+      .grid-item.b {
+        background-color: orangered;
+      }
+      .grid-item.c {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid-item a"></div>
+      <div class="grid-item b"></div>
+      <div class="grid-item c"></div>
+    </div>
+  </body>
+</html>

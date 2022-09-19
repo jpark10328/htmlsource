@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* max-width : 1025 ~ 전체화면 */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        background-color: yellow;
+        height: 100px;
+      }
+
+      /* 미디어 쿼리 */
+      @media screen and (max-width: 960px) {
+        /* 721px ~ 960px yellowgreen*/
+        .container {
+          background-color: yellowgreen;
+        }
+      }
+
+      @media screen and (max-width: 720px) {
+        /* 541px ~ 720px  blueviolet */
+        .container {
+          background-color: blueviolet;
+        }
+      }
+
+      @media screen and (max-width: 540px) {
+        /* ~ 540px  crimson */
+        .container {
+          background-color: crimson;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

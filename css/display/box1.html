@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 800px;
+        height: 300px;
+        border: 4px solid tomato;
+        margin: 20px;
+      }
+      .child {
+        /* width : auto (부모의 너비와 따라간다) */
+        /* width: 400px; */
+        max-width: 400px;
+        height: 200px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 부모의 너비는 자식의 너비를 결정짓게 됨
+         부모의 너비를 넓히면 자식은 계속 커지게 됨 => 무한정 커지지 말고 최대 너비를 지정해서
+         그 이상은 커지지 못하게 막을 수 있음 : max-width
+    -->
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

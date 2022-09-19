@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        자바 스크립트 type
+        1) string
+        2) number
+        3) boolean
+        4) object => Object, Date, Array, String, Number, Boolean
+        5) function
+
+        어떤 값도 담고 있지 않은 데이터 타입
+        1) undefined
+        2) null
+
+      */
+      let a, b, c, d, e;
+      (a = 1), (b = 1.5), (c = true), (d = false), (e = "안녕하세요");
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(typeof c);
+      console.log(typeof d);
+      console.log(typeof e);
+      let g;
+      console.log(typeof g);
+      console.log(typeof new Date());
+      console.log(typeof NaN); // NaN(Not a Number)
+      console.log(typeof function () {});
+      let h = null;
+      console.log(typeof h);
+
+      console.log(typeof Number("3.14"));
+    </script>
+  </body>
+</html>

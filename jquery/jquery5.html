@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <p>내용 1</p>
+      <p style="display: none">내용 2</p>
+      <p>내용 3</p>
+    </div>
+    <form action="">
+      <p id="area1">
+        <select name="course" id="course">
+          <option value="opt1">옵션1</option>
+          <option value="opt2" selected>옵션2</option>
+          <option value="opt3">옵션3</option>
+          <option value="opt4">옵션4</option>
+        </select>
+      </p>
+      <p id="area2">
+        <input type="checkbox" name="hobby1" id="" value="독서" />독서
+        <input type="checkbox" name="hobby1" id="" value="영화감상" />영화감상
+        <input type="checkbox" name="hobby1" id="" value="운동" checked />운동
+      </p>
+      <p id="area3">
+        <input type="radio" name="gender" id="" value="남성" checked />남성
+        <input type="radio" name="gender" id="" value="여성" />여성
+      </p>
+    </form>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        // 내용 2 화면에 보여주기
+        $("#wrap p:hidden").css({ display: "block", background: "#ff0" });
+
+        // selected 값 가져오기
+        console.log($("#area1 :selected").val());
+
+        // checked 값 가져오기
+        console.log($("#area2 :checked").val());
+
+        // 성별 가져오기
+        console.log($("#area3 :checked").val());
+      });
+    </script>
+  </body>
+</html>

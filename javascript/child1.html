@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      img {
+        box-sizing: border-box;
+        border: 1px solid black;
+        width: 500px;
+        height: 500px;
+      }
+      p {
+        width: 420px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="../css/mediaquery/images/bg0.jpg" alt="" />
+    </div>
+    <p>
+      <input type="checkbox" name="popup" id="" onclick="windowClosed()" />오늘은 이 창
+      그만 보기
+    </p>
+    <script>
+      function windowClosed() {
+        this.close(); //윈도우 닫기
+      }
+    </script>
+  </body>
+</html>

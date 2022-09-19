@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>Apple</li>
+      <li>Bag</li>
+      <li>Cat</li>
+      <li>Dog</li>
+      <li>Elephant</li>
+    </ul>
+    <ul id="menu2">
+      <li>내용2</li>
+    </ul>
+    <div id="wrap">
+      <h1>인접관계 선택자</h1>
+      <p>내용1</p>
+      <p class="txt">내용2</p>
+      <p>내용3</p>
+      <p>내용4</p>
+    </div>
+    <div>
+      <input type="text" name="" id="" />
+    </div>
+    <div>
+      <a href="http://www.naver.com">네이버</a>
+    </div>
+    <div>
+      <input type="text" name="username" id="" />
+    </div>
+    <div>
+      <input type="password" name="password" id="" />
+    </div>
+    <script>
+      $(function () {
+        // $(":text").val("Hello jquery!!");
+        $(":text:first").val("Hello jquery!!");
+        $(":password").val("비밀번호");
+
+        // $("body > *").css("color", "red");
+        // $("body  *").css("color", "red");
+
+        // 내용1 p 태그에 테두리 2px, 실선, 빨간색, 배경색 - 아무거나
+        // $("#wrap p:nth-child(2)")
+        //   .css("background-color", "#0ff")
+        //   .css("border", "2px solid red");
+
+        // 내용3 p 태그에 테두리 2px,  점선, 빨간색, 배경색 - 아무거나
+        // $("#wrap p:nth-child(4)")
+        //   .css("background-color", "#ff0")
+        //   .css("border", "2px dashed red");
+
+        // $("#wrap .txt")
+        //   .prev()
+        //   .css("background-color", "#0ff")
+        //   .css("border", "2px solid red");
+
+        // $("#wrap .txt")
+        //   .next()
+        //   .css("background-color", "#0ff")
+        //   .css("border", "2px solid red");
+
+        // $("#wrap .txt")
+        //   .siblings() //모든 형제 요소
+        //   .css("background-color", "#0ff")
+        //   .css("border", "2px solid red");
+
+        //closest() : 제일 가까운
+        // $(".txt").closest("div").css("border", "2px solid red");
+
+        // $("#menu li:first").css("border", "2px solid red");
+        // $("#menu li:last").css("border", "2px solid blue");
+        // $("#menu li:odd").css("border", "2px solid orange");
+        // $("#menu li:eq(2)").css("border", "2px solid orange");
+        $("#menu li:gt(2)").css("border", "2px solid orange");
+        $("#menu li:lt(2)").css("border", "2px solid red");
+
+        $("li:only-child").css("border", "2px solid red");
+      });
+    </script>
+  </body>
+</html>

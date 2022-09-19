@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slide {
+        /*
+            테두리:2px, 실선, 녹색
+            가로:800px
+            세로:300px
+            여백:상하 0, 좌우 가운데
+            padding:상하좌우 10px
+            */
+        border: 2px solid green;
+        width: 800px;
+        height: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+      }
+      .slide img {
+        /* float */
+        float: left;
+      }
+      .controls a {
+        /* 배경색 : #333
+           줄높이 : 50px
+           글자색상 : 흰색
+           display : block
+           글자는 가운데
+        */
+        background-color: #333;
+        line-height: 50px;
+        color: white;
+        display: block;
+        text-align: center;
+        white-space: nowrap; /* 공백을 기준으로 엔터를 넣지 말기 */
+        position: absolute;
+        top: calc(50% - 25px);
+      }
+      .prev {
+        right: 100%;
+      }
+      .next {
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide">
+      <img src="https://placeimg.com/400/300/nature" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloribus amet
+        placeat quis unde eius temporibus commodi, quae non, ad dolores impedit ipsa.
+        Veritatis facere mollitia illo quas necessitatibus dolores?
+      </p>
+      <div class="controls">
+        <a href="#" class="prev">Previous project</a>
+        <a href="#" class="next">next project</a>
+      </div>
+    </div>
+  </body>
+</html>

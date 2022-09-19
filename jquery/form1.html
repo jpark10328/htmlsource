@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form action="form2.html" method="get">
+      <div>
+        <!-- <label for="username">이름</label>
+        <input type="text" name="username" id="username" /> -->
+        <label>이름 <input type="text" name="username" id="username" /></label>
+      </div>
+      <div>
+        <label for="age">나이</label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <!-- <button> submit 기능을 가지고 있음 -->
+        <button type="button">보내기</button>
+      </div>
+    </form>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          //사용자 입력값 가져오기
+          $("#username").val();
+          //입력값 수정
+          $("#username").val("성춘향");
+
+          alert($("#password").val());
+        });
+      });
+    </script>
+  </body>
+</html>

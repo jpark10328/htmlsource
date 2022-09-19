@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //사용자에게 국어,영어,수학 점수를 입력받기
+      var kor = Number(prompt("국어 점수를 입력하세요"));
+      var eng = Number(prompt("영어 점수를 입력하세요"));
+      var math = Number(prompt("수학 점수를 입력하세요"));
+
+      // (국어+영어+수학) / 3 평균값을 기준으로 >=90 A, >=80 B, >=70 C, 나머지 D
+      var jumsu = (kor + eng + math) / 3;
+
+      switch (parseInt(jumsu / 10)) {
+        case 10:
+        case 9:
+          grade = "A";
+          break;
+        case 8:
+          grade = "B";
+          break;
+        case 7:
+          grade = "C";
+          break;
+        default:
+          grade = "D";
+      }
+
+      // if (jumsu >= 90) {
+      //   grade = "A";
+      // } else if (jumsu >= 80) {
+      //   grade = "B";
+      // } else if (jumsu >= 70) {
+      //   grade = "C";
+      // } else {
+      //   grade = "D";
+      // }
+
+      alert(grade);
+    </script>
+  </body>
+</html>

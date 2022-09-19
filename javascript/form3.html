@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="form2.html" method="get">
+      <div>
+        <input type="text" name="num1" id="num1" />
+        <select name="op" id="op">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="text" name="num2" id="num2" />
+        <button type="button">결과확인</button>
+      </div>
+      <div>
+        <input type="text" name="result" id="result" readonly />
+      </div>
+    </form>
+    <script>
+      // 버튼이 클릭되면 num1, num2 입력값 가져오기 : value
+      btn = document.querySelector("button");
+      btn.addEventListener("click", function () {
+        //  사칙연산 후 결과를 result 안에 보여주기
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        let op = document.getElementById("op").value;
+
+        let temp = 0;
+
+        switch (op) {
+          case "+":
+            temp = num1 + num2;
+            break;
+          case "-":
+            temp = num1 - num2;
+            break;
+          case "*":
+            temp = num1 * num2;
+            break;
+          case "/":
+            temp = num1 / num2;
+            break;
+        }
+
+        document.getElementById("result").value = temp;
+      });
+    </script>
+  </body>
+</html>

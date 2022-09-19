@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./mystyle.css" />
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script>
+      // 서버가 가지고 있는 coffee.html 페이지를 가져오기
+      // 현재 페이지에서 coffee 페이지 보기
+      window.onload = function () {
+        fetch("../data/coffee.html")
+          .then((response) => {
+            return response.text();
+          })
+          .then((result) => {
+            let div = document.querySelector("div");
+            div.textContent = result;
+            div.innerHTML = result;
+          })
+          .catch((error) => {});
+      };
+    </script>
+  </body>
+</html>

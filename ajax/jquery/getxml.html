@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../script/mystyle.css" />
+    <script src="../../jquery/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script>
+      $(function () {
+        //결과를 보여줄 요소
+        let div = $("div");
+        $(".container li:last-child").click(function () {
+          $.ajax({
+            url: "../data/school.xml",
+            dataType: "xml",
+            success: function (data) {
+              let title = $(data).find("title");
+              let time = $(data).find("time");
+              let teacher = $(data).find("teacher");
+
+              let result = "<ul><li>title : " + title.text() + "</li>";
+              result += "<li>time : " + time.text() + "</li>";
+              result += "<li>teacher : " + teacher.text() + "</li></ul>";
+
+              div.html(result);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

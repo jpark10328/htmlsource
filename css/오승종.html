@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .logo {
+        padding: 10px;
+      }
+      .header {
+        padding: 10px;
+        height: 50px;
+        width: 100%;
+        background-color: black;
+        overflow: auto;
+        margin-bottom: 30px;
+      }
+      .header li {
+        list-style-type: none;
+        float: left;
+        margin-left: 30px;
+      }
+      .header li a {
+        color: white;
+        text-decoration: none;
+      }
+      .display {
+        display: flex;
+        width: 100%;
+      }
+
+      .product {
+        width: 25%;
+        /* padding: 70px; */
+        /* border: 2px solid black; */
+      }
+      /* .product:first-child,
+      .product:last-child {
+        padding: 0;
+      } */
+      /* .imgwrapper {
+        width: 100px;
+      } */
+      .product img {
+        width: 300px;
+        height: 300px;
+        object-fit: scale-down;
+      }
+      .section {
+        line-height: 30px;
+        margin-left: 20px;
+        /* border: 2px solid black; */
+        font-size: small;
+        line-height: normal;
+      }
+      .footer {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        height: 60px;
+        width: 100%;
+        background-color: lightgray;
+        line-height: 60px;
+      }
+      .footer p {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+      }
+      .footer p a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+      }
+      /* .footer ul {
+        text-align: center;
+      }
+      .footer ul li {
+        float: left;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <a href="http://www.11st.co.kr"><img src="./logo.png" alt="" /></a>
+    </div>
+    <div class="header">
+      <nav>
+        <ul>
+          <li><a href="#">컴퓨터</a></li>
+          <li><a href="#">의류</a></li>
+          <li><a href="#">가구/인테리어</a></li>
+          <li><a href="#">스포츠/레저</a></li>
+          <li><a href="#">식품</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="display">
+      <div class="product">
+        <h2>HP</h2>
+        <div class="imgwrapper">
+          <img src="./hp.jpg" alt="" />
+        </div>
+        <div class="section">
+          <p>
+            Intel Core 8세대 i5 쿼드코어 장착<br />
+            외장그래픽 성능을 뛰어넘는 Intel UHD<br />DDR4 8G<br />
+            SSD 256G<br />
+            가격 : 1,200,000원
+          </p>
+          <form action="#">
+            <input type="button" value="쇼핑카트에 추가하기" />
+          </form>
+        </div>
+      </div>
+      <div class="product">
+        <h2>삼성 노트북 펜</h2>
+        <div class="imgwrapper">
+          <img src="./samsung.jpg" alt="" />
+        </div>
+        <div class="section">
+          <p>
+            Intel Core 8세대 i5 쿼드코어 장착<br />
+            외장그래픽 성능을 뛰어넘는 Intel UHD<br />DDR4 8G<br />
+            SSD 256G<br />
+            가격 : 1,200,000원
+          </p>
+          <form action="#">
+            <input type="button" value="쇼핑카트에 추가하기" />
+          </form>
+        </div>
+      </div>
+      <div class="product">
+        <h2>LG gram</h2>
+        <div class="imgwrapper">
+          <img src="./lggram.jpg" alt="" />
+        </div>
+        <div class="section">
+          <p>
+            Intel Core 8세대 i5 쿼드코어 장착<br />
+            외장그래픽 성능을 뛰어넘는 Intel UHD<br />DDR4 8G<br />
+            SSD 256G<br />
+            가격 : 1,200,000원
+          </p>
+          <form action="#">
+            <input type="button" value="쇼핑카트에 추가하기" />
+          </form>
+        </div>
+      </div>
+      <div class="product">
+        <h2>LG gram</h2>
+        <div class="imgwrapper">
+          <img src="./note.png" alt="" />
+        </div>
+        <div class="section">
+          <p>
+            Intel Core 8세대 i5 쿼드코어 장착<br />
+            외장그래픽 성능을 뛰어넘는 Intel UHD<br />DDR4 8G<br />
+            SSD 256G<br />
+            가격 : 1,200,000원
+          </p>
+          <form action="#">
+            <input type="button" value="쇼핑카트에 추가하기" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        | <a href="#">회사소개</a> | <a href="#">이용약관</a> |
+        <a href="#">전자금융거래약관</a> | <a href="#">개인정보처리방침</a> |
+        <a href="#">입점문의</a> |
+      </p>
+    </div>
+  </body>
+</html>

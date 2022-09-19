@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="./jquery-3.6.1.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h2>더블 클릭하면 사라집니다.</h2>
+    <p class="para1">이것은 문단입니다.</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+    <p id="para2">이것은 두번째 문단입니다.</p>
+    <button type="button">클릭</button>
+    <p class="out">마우스를 여기로 움직여 주세요</p>
+    이름 : <input type="text" name="" id="" /> 이메일 :
+    <input type="email" name="" id="" />
+    <script>
+      $(function () {
+        //버튼 클릭 시 body 모든 내용 숨기기
+        // $("button").click(function () {
+        //   $("*").hide();
+        // });
+        //out 요소에 마우스를 움직이면 alert 띄우기
+        // $(".out").mouseover(function () {
+        //   alert("마우스를 움직였습니다.");
+        // });
+
+        // $(".out").on("mouseover", function () {
+        //   alert("마우스를 움직였습니다.");
+        // });
+
+        $("input").focus(function () {
+          $(this).css("background-color", "#ccc");
+        });
+
+        $("input").blur(function () {
+          $(this).css("background-color", "#fff");
+        });
+
+        // $("input").on("blur", function () {
+        //   $(this).css("background-color", "#fff");
+        // });
+
+        // $("input").on("blur mouseover", function () {
+        //   $(this).css("background-color", "#fff");
+        // });
+
+        $("h2").dblclick(function () {
+          $(this).hide();
+        });
+
+        $("#hide").click(function () {
+          $(".para1").hide(2000);
+        });
+        $("#show").click(function () {
+          $(".para1").show();
+        });
+        $("#toggle").click(function () {
+          $(".para1").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

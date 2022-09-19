@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="form2.html" method="get">
+      <div>
+        <!-- <label for="username">이름</label>
+        <input type="text" name="username" id="username" /> -->
+        <label>이름 <input type="text" name="username" id="username" /></label>
+      </div>
+      <div>
+        <label for="age">나이</label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <!-- <button> submit 기능을 가지고 있음 -->
+        <button>보내기</button>
+      </div>
+    </form>
+    <script>
+      // 버튼이 클릭되면 입력값을 가져온 후 해당 요소가 값이 없다면 되돌려보내기
+      btn = document.querySelector("button");
+      btn.addEventListener("click", function (event) {
+        //이벤트 막기 : 버튼이 기본적으로 가지고 있는 이벤트 중지(a 링크 중지 가능)
+        event.preventDefault();
+
+        let username = document.querySelector("#username");
+        //비밀번호 가져오기
+        let age = document.querySelector("#age");
+        //age 가져오기
+        let password = document.querySelector("#password");
+
+        if (username.value == "") {
+          alert("이름을 입력하세요");
+          username.focus();
+          return;
+        } else if (age.value == "") {
+          alert("나이를 입력하세요");
+          age.focus();
+          return;
+        } else if (password.value == "") {
+          alert("비밀번호를 입력하세요");
+          password.focus();
+          return;
+        }
+
+        // form.submit()
+        document.querySelector("form").submit();
+      });
+    </script>
+  </body>
+</html>

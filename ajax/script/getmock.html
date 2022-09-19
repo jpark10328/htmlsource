@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="mb-3">
+        <button type="button" class="btn btn-success">데이터 가져오기</button>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>ip_address</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script>
+      //버튼 클릭 시 MOCK_DATA.json 파일 요청 후
+      //가져온 데이터를 tbody 안에 보여주기
+      let tbody = document.querySelector("tbody");
+
+      document.querySelector(".btn").addEventListener("click", getJson);
+
+      function getJson() {
+        fetch("../data/MOCK_DATA.json")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("주소를 확인해 주세요");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            let result = "";
+
+            data.forEach((item) => {
+              result += "<tr>";
+              result += "<td>" + item.id + "</td>";
+              result += "<td>" + item.first_name + "</td>";
+              result += "<td>" + item.last_name + "</td>";
+              result += "<td>" + item.email + "</td>";
+              result += "<td>" + item.gender + "</td>";
+              result += "<td>" + item.ip_address + "</td>";
+              result += "</tr>";
+            });
+
+            tbody.innerHTML = result;
+          })
+          .catch((error) => {
+            tbody.innerHTML = error;
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header"><a href="">HEADER 1</a></h1>
+    <h2 id="header2">HEADER 2</h2>
+    <div id="divA">This is <span>some</span> text!</div>
+    <ul>
+      <li>List Item1</li>
+      <li>List Item1</li>
+      <li>List Item1</li>
+      <li>List Item1</li>
+      <li>List Item1</li>
+    </ul>
+    <ul name="list">
+      <li>List Item2</li>
+      <li>List Item2</li>
+      <li>List Item2</li>
+      <li>List Item2</li>
+      <li>List Item2</li>
+    </ul>
+    <script>
+      // DOM 문서 객체 모델
+      // 노드(태그) 가져오기 : 1. 아이디로 찾기
+      var h1 = document.getElementById("header");
+      console.log(h1);
+      // h1 이 가지고 있는 텍스트 노드 가져오기
+      console.log(h1.innerText);
+      console.log(h1.innerHTML);
+
+      var h2 = document.getElementById("header2");
+      console.log(h2);
+      // h2 의 텍스트 노드 값 변경하기
+      // h2.innerText = "getElementById";
+      h2.innerHTML = "<a href=''>getElementById</a>";
+
+      var div = document.getElementById("divA");
+      console.log(div);
+      console.log(div.textContent);
+      console.log(div.innerText);
+
+      // 노드(태그) 가져오기 : 2. 태그명으로 찾기
+      var ul = document.getElementsByTagName("ul");
+      console.log(ul);
+      console.log(ul.item(0));
+      console.log(ul.item(0).innerHTML);
+      console.log(ul.item(0).firstChild);
+      console.log(ul.item(0).firstElementChild);
+
+      // 노드(태그) 가져오기 : 3. 이름으로 찾기
+      var list = document.getElementsByName("list");
+      console.log(list);
+
+      // 노드(태그) 가져오기 : 4. 클래스명으로 찾기
+      // document.getElementsByClassName()
+
+      // 노드(태그) 가져오기 : 5. css 선택자로 찾기
+      // document.querySelector();
+    </script>
+  </body>
+</html>

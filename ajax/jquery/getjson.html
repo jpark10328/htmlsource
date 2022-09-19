@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../script/mystyle.css" />
+    <script src="../../jquery/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <ul class="container">
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
+    </ul>
+    <div></div>
+    <script>
+      // 서버가 가지고 있는 version.json 페이지를 가져오기
+      // 현재 페이지에서 version.json 페이지 보기
+      $(function () {
+        //결과를 보여줄 요소
+        let div = $("div");
+
+        $(".container li:last-child").click(function () {
+          $.getJSON({
+            url: "../data/version.json",
+            success: function (result) {
+              let data = "<ul><li>version : " + result.version + "</li>";
+              data += "<li>codename : " + result.codename + "</li></ul>";
+
+              div.html(data);
+            },
+            error: function (xhr, textstatus, error) {
+              div.html("데이터를 가져오는 데 실패했습니다.");
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

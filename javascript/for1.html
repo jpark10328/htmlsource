@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // for(let i=0;i< 원하는 반복횟수; i++){
+      //     반복해야 할 구문;
+      // }
+      //  let i=1;  초기화(처음에 한 번만 실행)
+      //   i < 11; i가 11 이 되는 순간 for 종료(조건문)
+      // i++;  i=i+1; 반복을 한번 할 때마다 증감
+      for (let i = 1; i < 11; i++) {
+        console.log(i);
+      }
+
+      console.log();
+      // 배열 생성 == 파이썬 리스트
+      const fruit = ["사과", "망고", "바나나", "수박", "자두", "포도", 33];
+      for (let i = 0; i < fruit.length; i++) {
+        console.log(fruit[i]);
+      }
+      // for in Loop
+      for (let i in fruit) {
+        console.log(fruit[i]);
+      }
+    </script>
+  </body>
+</html>

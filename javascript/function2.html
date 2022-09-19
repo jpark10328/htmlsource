@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="showDialog2()">클릭</button>
+    <button type="button" onclick="func1('Hello')">클릭1</button>
+    <script>
+      showDialog2();
+      // func1("Hello", "hong"); Cannot access 'func1' before initialization
+
+      // 함수
+      // function 함수명(arg1...){}
+
+      // func2("Hello", "hong"); Cannot access 'func2' before initialization
+
+      // 익명함수 - 호이스팅 불가
+      let func2 = function (greeting, name) {
+        alert(greeting + "!" + name);
+      };
+
+      // 기명함수 - 호이스팅 불가
+      let func1 = function showDialog(greeting, name) {
+        alert(greeting + "!" + name);
+      };
+
+      // 선언적 함수 - 호이스팅 가능
+      function showDialog2() {
+        alert("안녕하세요 !");
+      }
+
+      // 호출
+      // showDialog("Hello", "hong"); showDialog is not defined
+      // func1("Hello", "hong");
+    </script>
+  </body>
+</html>

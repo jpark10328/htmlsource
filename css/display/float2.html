@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 100px;
+        background-color: tomato;
+        color: white;
+        font-size: 30px;
+        margin: 10px;
+        float: left;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both; /* float 중지 */
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- float : 블럭요소를 특정 방향으로 배치 
+               : 요소가 떠 있는 상태 => 다른 요소들이 float 요소가 있는지 모르는 상황
+    -->
+    <div class="clearfix">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <div class="box1">4</div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        form : 웹 서버에 제출하기 위한 양식 범위를 정의
+         form 은 다른 form 을 자식 요소로 포함할 수 없음
+
+         action : 전송한 정보를 처리할 웹 페이지의 URL
+         http://192.168.123.100:5500/form/form1.html?username=홍길동#
+         http://192.168.123.100:5500/form/form2.html?username=홍길동
+         f8&query=장고
+
+         method : get(기본방식) - 사용자 입력값이 주소줄에 따라가는 방식
+                  post - 사용자 입력값을 감춰서 보냄(주소줄에서 볼 수 없음)
+    -->
+    <form action="form2.html" method="get">
+      <div>
+        <!-- <label for="username">이름</label>
+        <input type="text" name="username" id="username" /> -->
+        <label>이름 <input type="text" name="username" id="username" /></label>
+      </div>
+      <div>
+        <label for="age">나이</label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <!-- <button> submit 기능을 가지고 있음 -->
+        <button type="button">보내기</button>
+      </div>
+    </form>
+    <script>
+      // 버튼이 클릭되면 이름 입력값을 가져오기 : value
+      btn = document.querySelector("button");
+      btn.addEventListener("click", function () {
+        let username = document.querySelector("#username");
+        // alert(username.value);
+        username.value = "성춘향";
+
+        //비밀번호 가져오기
+        let password = document.querySelector("#password");
+        alert(password.value);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* li:first-child {
+        text-decoration: underline;
+      }
+      li:last-child {
+        text-decoration: underline;
+      }
+      li:nth-child(3) {
+        text-decoration: underline;
+      } */
+      /* li:nth-child(2n) { 
+        background-color: silver;
+      }
+      li:nth-child(2n + 1) {
+        background-color: yellow;
+      } */
+      /* li:nth-child(n + 4) { 
+        background-color: yellow;
+      } */
+      li:nth-child(-n + 3) {
+        background-color: yellow;
+      }
+      .fruits p:nth-child(2) {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 선택자 
+         1. 태그 : 태그명을 이용해서 css 부여
+         2. 전체
+         3. 아이디 : 여러개 부여(중복 안되게)
+         4. 클래스 : 여러개 부여
+         5. 자손 : 공백
+         6. 자식 : >
+         7. 형제 : +(바로 아래), ~ (모든 형제)
+         8. 그룹 : 선택자1, 선택자2, 선택자3.....
+         9. 속성 : [속성명], [속성명=값], [속성명^=값] : 시작하는, [속성명~=값]: 포함하고 있는, [속성명$=값]:끝나는
+         10. 가상 클래스 :  :link, :active, :hover...
+         11. 가상 요소 :   ::before, ::after  (콜론 하나도 허용하나 표준은 두 개)
+         12. 구조 선택자 
+         13. 형태 구조 선택자
+        -->
+    <ul>
+      <li>리스트아이템</li>
+      <li>리스트아이템</li>
+      <li>리스트아이템</li>
+      <li>리스트아이템</li>
+      <li>리스트아이템</li>
+      <li>리스트아이템</li>
+    </ul>
+    <ul class="fruits">
+      <div>딸기</div>
+      <p>사과</p>
+      <p>오렌지</p>
+      <p>망고</p>
+    </ul>
+  </body>
+</html>

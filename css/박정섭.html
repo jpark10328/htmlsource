@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        border: 2px solid black;
+        box-sizing: border-box;
+      }
+      .header {
+        padding: 10px;
+      }
+      .menu {
+        background-color: #333;
+        height: 50px;
+      }
+      .menu li {
+        float: left;
+        list-style-type: none;
+        margin-left: 30px;
+      }
+      .menu li a {
+        display: inline-block;
+      }
+      .menu li a:link {
+        text-decoration: none;
+        color: #fff; /* #ffffff(흰색) */
+        line-height: 50px;
+      }
+      .main {
+        display: flex;
+      }
+      .article {
+        width: 25%;
+        padding: 70px;
+        margin-left: 20px;
+        line-height: 30px;
+        box-sizing: border-box;
+      }
+      .product {
+        width: 300px;
+        height: 300px;
+        object-fit: scale-down;
+      }
+      h2 {
+        margin-bottom: 30px;
+      }
+      ul li {
+        list-style-type: none;
+      }
+      .footer {
+        display: flex;
+        height: 60px;
+        width: 100%;
+        background-color: lightgray;
+        line-height: 60px;
+      }
+      .footer p {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+      }
+      .footer p a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="header">
+        <a class="" href="http://11st.co.kr"
+          ><img src="./img/logo.png" alt=""
+        /></a>
+      </div>
+      <ul class="menu">
+        <li><a href="#">컴퓨터</a></li>
+        <li><a href="#">의류</a></li>
+        <li><a href="#">가구/인테리어</a></li>
+        <li><a href="#">스포츠/레저</a></li>
+        <li><a href="#">식품</a></li>
+      </ul>
+      <div class="main">
+        <div class="article">
+          <h2>HP</h2>
+          <img class="product" src="./img/hp.jpg" alt="" />
+          <ul class="description">
+            <li>Intel Core 8세대 i5 쿼드코어 장착</li>
+            <li>외장 그래픽 성능을 뛰어넘는 Intel UHD</li>
+            <li>DDR4 8G</li>
+            <li>SSD 256G</li>
+            <li>가격 1,200,000원</li>
+          </ul>
+          <form action="#">
+            <input type="button" value="쇼핑카트에 추가하기" />
+          </form>
+        </div>
+        <div class="article">
+          <h2>삼성 노트북 펜</h2>
+          <img class="product" src="./img/samsung.jpg" alt="" />
+          <ul class="description">
+            <li>Intel® 코어 8세대 i3 쿼드코어 장착</li>
+            <li>8GB DDR4 Memory</li>
+            <li>멀티 태스킹에 탁월한 FHD 고해상도</li>
+            <li>FHD RealView LED Display</li>
+            <li>가격 1,199,000원</li>
+          </ul>
+          <form action="#">
+            <input type="button" value="쇼핑카트에 추가하기" />
+          </form>
+        </div>
+        <div class="article">
+          <h2>LG gram</h2>
+          <img class="product" src="./img/lggram.jpg" alt="" />
+          <ul class="descriptioin">
+            <li>8세대 Intel®코어 i5-8250U</li>
+            <li>백라이트 키보드 풀 사이즈 79키</li>
+            <li>인텔 UHD Graphics 620</li>
+            <li>IPS LED 디스플레이</li>
+            <li>가격 1,439,000원</li>
+          </ul>
+          <form action="#">
+            <input type="button" value="쇼핑카트에 추가하기" />
+          </form>
+        </div>
+        <div class="article">
+          <h2>LG gram</h2>
+          <img class="product" src="./img/note.png" alt="" />
+          <ul class="description">
+            <li>8세대 Intel®코어 i3-8250U</li>
+            <li>백라이트 키보드 풀 사이즈 79키</li>
+            <li>인텔 UHD Graphics 520</li>
+            <li>IPS LED 디스플레이</li>
+            <li>가격 1,139,000원</li>
+          </ul>
+          <form action="#">
+            <input type="button" value="쇼핑카트에 추가하기" />
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          | <a href="#">회사소개</a> | <a href="#">이용약관</a> |
+          <a href="#">전자금융거래약관</a> | <a href="#">개인정보처리방침</a> |
+          <a href="#">입점문의</a> |
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

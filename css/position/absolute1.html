@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 4000px;
+      }
+      img {
+        vertical-align: top;
+      }
+      .box {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        position :absolute 인 경우 부모를 지정 안 하면 viewport가 부모가 되버림
+
+        absolute 의 부모가 되려면 postion 이 부여된 다른 요소 필요
+    -->
+    <div class="box">
+      <img src="https://placeimg.com/100/120/animals" alt="동물" />
+    </div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel adipisci recusandae
+      quod accusamus, rerum sint saepe vero! Quaerat delectus esse, iure consequatur,
+      laborum ea asperiores qui quam a consequuntur aspernatur, quod quidem atque cumque
+      eveniet. Exercitationem error eligendi impedit eos nihil odio porro, voluptatum
+      debitis libero! Et architecto deleniti hic asperiores fugit cupiditate maxime
+      accusantium nobis neque, quaerat sunt aliquam eaque dignissimos alias quos possimus
+      quae, debitis incidunt commodi repellendus quod illum, reprehenderit voluptatem quo?
+      Dolorem, eligendi tempora. Odio, earum temporibus nemo mollitia, dolor laudantium
+      voluptate corporis recusandae quisquam illo maiores nihil eaque delectus dolorem
+      dolores cum accusantium ducimus repudiandae!
+    </p>
+  </body>
+</html>

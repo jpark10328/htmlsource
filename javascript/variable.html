@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num3 = 100;
+      //   var num1 = 3;
+      //   var num2 = 4;
+
+      //   var num1 = 25;
+
+      //   let num1 = 3;
+
+      //   num1 = 5;
+      //   console.log(num1);
+      sum();
+      var z = 15;
+      function sum() {
+        console.log("sum 함수 호출");
+        console.log(z);
+      }
+
+      let x = 10;
+      {
+        let x = 2;
+        // let x = 3; 유효범위 같은 곳에 재선언 불가
+        console.log("블럭" + x);
+        console.log("num3 " + num3);
+      }
+      //   let x= 20;
+      console.log(x);
+
+      // 호이스팅 : 끌어올려서 사용(var)
+      carName = "아우디";
+      var carName;
+      //   let carName;
+
+      console.log("carName " + carName);
+
+      const PI = 3.1415926535;
+      //   PI = 3.14; 상수 재할당 불가
+      console.log(PI);
+
+      // const : 배열생성, 객체 생성, Function 생성, 정규식 생성
+    </script>
+  </body>
+</html>
